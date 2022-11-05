@@ -1,0 +1,68 @@
+@import "./form.css";
+
+body {
+  min-height: 100vh;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.logo {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 17.5px;
+  line-height: 21px;
+  /* identical to box height */
+}
+
+main {
+  gap: 40px;
+  display: flex;
+  flex-direction: column;
+}
+
+main>* {
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+nav~main {
+  margin-top: 40px;
+}
+
+main~footer {
+  margin-top: 40px;
+}
+
+/* Article/cards header and footer children should not have a margin-bottom */
+article>header>*,
+article>footer>* {
+  margin-bottom: 0px;
+}
+
+main~footer ul {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+}
+
+main~footer ul>li {
+  list-style: none;
+}
+
+/* we will explain what these classes do next! */
+.v-enter-active,
+.v-leave-active {
+  transition: opacity 0.5s ease;
+}
+
+.v-enter-from,
+.v-leave-to {
+  opacity: 0;
+}
